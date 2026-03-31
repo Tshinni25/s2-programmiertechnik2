@@ -17,7 +17,9 @@ public abstract class AbstractFrequencyTable implements FrequencyTable {
 
 	@Override
 	public void addAll(FrequencyTable fq) {
-		for (fq.)
+		for (int i = 0; i < fq.size; i++) {
+			add(fq[i]);
+		}
 	}
 
 	@Override
