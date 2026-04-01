@@ -20,6 +20,7 @@ public abstract class AbstractFrequencyTable implements FrequencyTable {
 		for (int i = 0; i < fq.size; i++) {
 			add(fq[i]);
 		}
+		fq.coll
 	}
 
 	@Override
