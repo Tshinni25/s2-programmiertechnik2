@@ -1,5 +1,3 @@
-package aufgabe1;
-
 /**
  *
  * @author oliverbittel
@@ -17,22 +15,32 @@ public abstract class AbstractFrequencyTable implements FrequencyTable {
 
 	@Override
 	public void addAll(FrequencyTable fq) {
-		for (int i = 0; i < fq.size; i++) {
-			add(fq[i]);
+		for (int i = 0; i < fq.size(); i++) {
+			add(fq.get(i).getWord(), fq.get(i).getFrequency());
 		}
-		fq.coll
 	}
 
 	@Override
 	public void collectNMostFrequent(int n, FrequencyTable fq) {
-		// Ihr Code:
+		fq.clear();
+
+		if (size() <= n) {
+			fq.addAll(this);
+		}
+
+		for (int i = 0; i < n; i++) {
+			fq.add(get(i).getWord(), get(i).getFrequency());
+		}
 	}
 
 	@Override
 	public String toString() {
 		StringBuilder s = new StringBuilder("{");
-		// Ihr Code:
-
+		for  (int i = 0; i < size(); i++) {
+			s.append(get(i));
+			s.append(", ");
+		}
+		s.append("} size = ").append(size());
 		return s.toString();
 	}
 }

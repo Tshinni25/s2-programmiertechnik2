@@ -1,5 +1,3 @@
-package aufgabe1;
-
 /**
  * Klasse für Wörter mit ihren Häufigkeiten.
  * @author oliverbittel
@@ -12,7 +10,7 @@ public class Word {
 	/**
 	 * Konstruktor.
 	 * @param word Wort
-	 * @param f H&auml;ufgkeit
+	 * @param f Häufigkeit
 	 */
 	public Word(String word, int f) {
 		this.word = word;

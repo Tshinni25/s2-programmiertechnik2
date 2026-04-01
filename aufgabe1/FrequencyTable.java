@@ -1,5 +1,3 @@
-package aufgabe1;
-
 /**
  *
  * @author oliverbittel
@@ -19,21 +17,21 @@ public interface FrequencyTable {
 	boolean isEmpty();
 	
 	/**
-	 * Loescht die Tabelle.
+	 * Löscht die Tabelle.
 	 */
 	void clear();
 
 	/**
-	 * Fuegt das Wort w mit der Haeufigkeit f zu dieser Tabelle dazu.
+	 * Fügt das Wort w mit der Haeufigkeit f zu dieser Tabelle dazu.
 	 * Falls w bereits in der Tabelle enthalten ist, 
 	 * wird die Haeufigkeit um f erhöht.
 	 * @param w Wort.
-	 * @param f H&auml;ufigkeit.
+	 * @param f Häufigkeit.
 	 */
 	void add(String w, int f);
 	
 	/**
-	 * Fuegt das Wort w mit der Haeufigkeit 1 zu dieser Tabelle dazu.
+	 * Fügt das Wort w mit der Haeufigkeit 1 zu dieser Tabelle dazu.
 	 * Falls w bereits in der Tabelle enthalten ist, 
 	 * wird die Haeufigkeit um 1 erhöht.
 	 * @param w Wort.
@@ -41,15 +39,15 @@ public interface FrequencyTable {
 	void add(String w);
 	
 	/**
-	 * Fuegt alle Woerter mit ihren Haeufigkeiten aus fq zu dieser Tabelle dazu.
-	 * Haeufigkeiten für gleiche Woerter werden addiert.
-	 * fq bleibt unveraendert.
-	 * @param fq Haeufigkeitstabelle.
+	 * Fügt alle Wörter mit ihren Häufigkeiten aus fq zu dieser Tabelle dazu.
+	 * Häufigkeiten für gleiche Wörter werden addiert.
+	 * fq bleibt unverändert.
+	 * @param fq Häufigkeitstabelle.
 	 */
 	void addAll(FrequencyTable fq);
 
 	/**
-	 * Liefert das Wort mit seiner Häufigkeit zur&uuml;ck, das mit seiner Haeufigkeit an Position pos steht.
+	 * Liefert das Wort mit seiner Häufigkeit zurück, das mit seiner Häufigkeit an Position pos steht.
 	 * get(0) liefert das häufigste Wort zurück, 
 	 * get(1) liefert das zweithäufigste Wort zurück, usw.
 	 * @param pos Position.
@@ -59,16 +57,16 @@ public interface FrequencyTable {
 	Word get(int pos);
 
 	/**
-	 * Liefert die Haeufigkeit des Worts w zurueck.
+	 * Liefert die Häufigkeit des Worts w zurück.
 	 * Falls das Wort nicht vorkommt, wird 0 zurueckgeliefert.
 	 * @param w Wort
-	 * @return Haeufigkeit.
+	 * @return Häufigkeit.
 	 */
 	int get(String w);
 	
 	/**
-	 * Speichert die n haeufigsten Woerter in fq.
-	 * Falls die Tabelle weniger als n Einträge hat, werden alle Woerter in fq gespeichert.
+	 * Speichert die n häufigsten Wörter in fq.
+	 * Falls die Tabelle weniger als n Einträge hat, werden alle Wörter in fq gespeichert.
 	 * Beispiel: 
 	 * Falls tab1 = {"ein":3, "das":3, "ist":2, "der:1", "die":1}, dann 
 	 * gilt nach Aufruf von tab1.collectMostFrequent(3,tab2):

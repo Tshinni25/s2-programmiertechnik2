@@ -1,5 +1,3 @@
-package aufgabe1;
-
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
@@ -73,7 +71,7 @@ public class ArrayFrequencyTable_Test {
 		in = new LineNumberReader(new FileReader("Kafka_Der_Prozess.txt", StandardCharsets.UTF_8));
 		String line;
 		
-		// Text einlesen und Häfigkeiten aller Wörter bestimmen:
+		// Text einlesen und Häufigkeiten aller Wörter bestimmen:
 		while ((line = in.readLine()) != null) {
 			String[] wf = line.split("[^a-z^A-Z^ß^ä^ö^ü^Ä^Ö^Ü]+");
 			for (String w: wf) {
@@ -90,7 +88,12 @@ public class ArrayFrequencyTable_Test {
 		
 		// Ausgabe der 100 häufigsten Wörter:
 		System.out.println("100 häufigste Wörter:");
-		// Ihr Code
+		ArrayFrequencyTable kafka = new ArrayFrequencyTable();
+		tab.collectNMostFrequent(100, kafka);
+
+		for (int i = 0; i < kafka.size(); i++) {
+			System.out.println(kafka.get(i));
+		}
 		
 		System.out.println("");		
 		System.out.println("Benötigte Zeit in msec: " + elapsedTime);
