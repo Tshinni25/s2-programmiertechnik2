@@ -1,3 +1,5 @@
+package aufgabe2;
+
 /**
  *
  * @author oliverbittel

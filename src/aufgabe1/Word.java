@@ -1,3 +1,5 @@
+package aufgabe1;
+
 /**
  * Klasse für Wörter mit ihren Häufigkeiten.
  * @author oliverbittel
